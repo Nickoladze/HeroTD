@@ -1,0 +1,134 @@
+// Units File
+"DOTAUnits"
+{
+	"Version"	"1"
+
+	"npc_dota_td_basic"
+	{
+		"BaseClass"					"npc_dota_venomancer_plagueward"
+		"Model"						"models/props_structures/tower_good.vmdl"
+		"SoundSet"					"Hero_Tinker"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_tinker.vsndevts"
+
+		"BaseClass"					""
+		"Level"						"1"
+		"ModelScale" 				"1"
+
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability5"					""
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"25"
+		"AttackDamageMax"			"30"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.3"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"900"
+		"AttackRange"				"900"
+		"ProjectileModel"			"particles/base_Attacks/ranged_tower_good.vpcf"
+		"ProjectileSpeed"			"1900"
+
+		"BoundsHullName"			"DOTA_HULL_SIZE_BUILDING"
+		//"HealthBarOffset"			"170"
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"0.5"
+	
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		"StatusHealth"				"150"
+		"StatusHealthRegen"			"0.25"
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0"
+
+		"TeamName"					"DOTA_TEAM_GOODGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		
+		"VisionDaytimeRange"		"1800"
+		"VisionNighttimeRange"		"1800"
+
+		"HasInventory"				"0"
+
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//=================================================================================
+	// Crystal Maiden
+	//=================================================================================
+	"npc_dota_tdcreep_crystal_maiden"
+	{										
+		"Model"						"models/heroes/crystal_maiden/crystal_maiden.vmdl"
+		"Portrait"					"vgui/hud/heroportraits/portrait_crystal_maiden"
+		"BaseClass"					"npc_dota_creep_lane"
+		"SoundSet"					"Hero_Crystal"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts"
+		
+		"Level"						"1"
+		"ModelScale"				".95"
+
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+
+		"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength"		"16"
+		"AttributeStrengthGain"		"1.7"
+		"AttributeBaseIntelligence"	"16"
+		"AttributeIntelligenceGain"	"2.9"
+		"AttributeBaseAgility"		"16"
+		"AttributeAgilityGain"		"1.6"
+
+		"ArmorPhysical"				"-1"
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+
+		//"RingRadius"				"40"
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+		"HealthBarOffset"			"135"
+
+		"BountyXP"					"0"
+		"BountyGoldMin"				"20"
+		"BountyGoldMax"				"25"
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"280"
+		"MovementTurnRate"			"0.5"
+
+		"StatusHealth"				"150"
+		"StatusHealthRegen"			"0.25"
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0.01"
+		
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_HERO"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_HERO"
+
+		"VisionDaytimeRange"		"0"
+		"VisionNighttimeRange"		"0"
+	}
+}

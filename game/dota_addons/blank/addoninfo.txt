@@ -1,0 +1,5 @@
+"AddonInfo"
+{
+     maps			"td_map"
+     "IsPlayable"	"1"
+}

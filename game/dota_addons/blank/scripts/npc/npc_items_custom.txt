@@ -1,0 +1,76 @@
+"DOTAAbilities"
+{
+	"item_tower_basic"
+	{
+		"ID"							"1000"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_ward_observer"
+
+		"AbilityCastRange"				"1800"
+		"AbilityCastPoint"				"0.0"
+		
+		"ItemCost"						"100"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+
+		"OnSpellStart"
+		{
+			"SpawnUnit"
+			{
+				"UnitName"				"npc_dota_td_basic"
+				"Target"				"POINT"
+			}
+			
+			"SpendCharge"
+			{}
+		}
+	}
+
+	"item_placebuilding"
+    {
+		"ID" "2003"
+		"AbilityBehavior"                               "DOTA_ABILITY_BEHAVIOR_POINT_TARGET"
+		"BaseClass"                                             "item_place_building_free"
+		"AbilityName" "item_placebuilding"
+
+		"AbilityCastRange"                              "500"
+		"AbilityCastPoint"                              "0.0"
+
+		"BuildingName"                                  "npc_dota_goodguys_tower1_top"
+		"PreventBlocking"                               "1"
+
+		"AbilitySpecial"
+		{
+		        "01"
+		        {
+		                "var_type"                              "FIELD_INTEGER"
+		                "alignment_grid_size"                           "3"
+		        }
+		        "02"
+		        {
+		                "var_type"                              "FIELD_INTEGER"
+		                "squares_per_side"                                      "3"
+		        }
+		        "03"
+		        {
+		                "var_type"                              "FIELD_INTEGER"
+		                "building_size"                         "1"
+		        }
+		}
+
+		"ItemCost"            "90"
+		"ItemShopTags"          "consumable"
+		"ItemQuality"          "consumable"
+		"ItemStackable"          "1"
+		"ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemPermanent"          "0"
+		"ItemInitialCharges"      "1"
+		"SideShop"            "1"
+	}
+}
