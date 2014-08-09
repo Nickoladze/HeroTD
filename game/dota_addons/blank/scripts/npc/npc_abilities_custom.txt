@@ -3,185 +3,197 @@
 {
 	"Version"		"1"
 
-	//=================================================================================================================
-	// Creature: Acid Spray
-	//=================================================================================================================
-	"creature_acid_spray"
+	"tower_splash"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass" 					"ability_datadriven"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_COMPOSITE"
-		"AbilityTextureName"			"alchemist_acid_spray"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"ability_datadriven"
+		"AbilityTextureName"				"sven_great_cleave"
 
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.2"
-		"AbilityCastRange"				"900"
-	
-		"precache"
+		"Modifiers"
 		{
-			"soundfile"					"soundevents/game_sounds/ability_acid_spray.vsndevts"
+			"tower_orb_splash"
+			{
+				"IsHidden"					"0"
+				"Passive"					"1"
+				"Orb"
+				{
+					"Priority"				"DOTA_ORB_PRIORITY_ABILITY"
+				}
+				
+				"OnOrbImpact"
+				{
+					"CleaveAttack"
+					{
+						//"Target"			"TARGET"
+						"CleavePercent"		"50"
+						"CleaveRadius"		"%radius"
+						"CleaveEffect"		"particles/items_fx/battlefury_cleave.vpcf"
+						//"CleaveEffect"		"particles/units/heroes/hero_tiny/tiny_grow_cleave.vpcf"
+					}
+
+					"FireEffect"
+					{
+						"Target"			"TARGET"
+						"EffectName"		"particles/units/heroes/hero_dragon_knight/dragon_knight_elder_dragon_fire_explosion.vpcf"
+						"EffectAttachType"	"follow_origin"
+						"EffectRadius"		"%radius"
+					}
+
+					//"Damage"
+					//{
+					//	"Target"			"TARGET"
+						//"Type"			""
+						//"MinDamage"		""
+						//"MaxDamage"		""
+					//}
+				}
+			}
 		}
-		
-		"OnOwnerDied"
+
+		"AbilitySpecial"
 		{
-			"CreateThinker"
+			"01"
 			{
-				"ModifierName"			"creature_acid_spray_thinker"
-				"Target"				"CASTER"
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"400"
 			}
-			
-			"FireEffect"
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	"tower_flamethrower"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+		"AbilityTextureName"			"ogre_magi_fireblast"
+		"MaxLevel"						"1"
+
+		"AbilityCooldown"				"2.0"
+		"AbilityChannelTime"			"2.0"
+
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0"
+
+		"AbilityManaCost"				"0"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"radius"				"900"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"speed"					"900"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage"				"20"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"rotation_angle"		"90"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_count"		"12"
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"ApplyModifier"
 			{
 				"Target"				"CASTER"
-				"EffectName"			"particles/econ/generic/generic_aoe_explosion_sphere_1/generic_aoe_explosion_sphere_1.vpcf"
-				"EffectAttachType"		"follow_origin"
-				"EffectRadius"			"%radius"
-				"EffectDurationScale"	"1"
-				"EffectLifeDurationScale" "1"
-				"EffectColorA"			"25 150 25"
-				"EffectColorB"			"25 150 25"
+				"ModifierName"			"modifier_channel_start"
 			}
-		
+
+			"FireSound"
+			{
+				"Target"				"CASTER"
+				"EffectName"			"Hero_DragonKnight.BreathFire"
+			}
+
 			"Damage"
 			{
 				"Type"					"DAMAGE_TYPE_MAGICAL"
-				"Damage"				"%damage_explode"
+				"Damage"				"%damage"
 				"Target"
 				{
 					"Center"			"CASTER"
 					"Radius"			"%radius"
-					"Teams"				"DOTA_UNIT_TARGET_TEAM_NONE"
+					"Teams"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
 					"Types"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 				}
 			}
-			
-			"Knockback"
+		}
+
+		"OnChannelSucceeded"
+		{
+			"RemoveModifier"
 			{
-				"Target"
-				{
-					"Center"	"CASTER"
-					"Teams"		"DOTA_UNIT_TARGET_TEAM_NONE"
-					"Radius"	"%radius"
-				}
-				"Center"	"CASTER"
-				"Duration"	"0.75"
-				"Distance"	"%radius + 25"
-				"Height"	"175"
+				"Target"				"CASTER"
+				"ModifierName"			"modifier_channel_start"
 			}
-			
-			"FireSound"
+		}
+		
+		"OnChannelFinish"
+		{
+			"RemoveModifier"
 			{
-				"EffectName"		"Ability.AcidSpray"
-				"Target"			"CASTER"
+				"Target"				"CASTER"
+				"ModifierName"			"modifier_channel_start"
+			}
+		}
+		
+		"OnChannelInterrupted"
+		{
+			"RemoveModifier"
+			{
+				"Target"				"CASTER"
+				"ModifierName"			"modifier_channel_start"
 			}
 		}
 
 		"Modifiers"
 		{
-			"creature_acid_spray_thinker"
+			"modifier_channel_start"
 			{
-				"Aura"					"create_acid_spray_armor_reduction_aura"
-				"Aura_Radius"			"%radius"
-				"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-				"Aura_Types"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_MECHANICAL"
-				"Aura_Flags"			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-				"Duration"				"%duration"
-
 				"OnCreated"
 				{
 					"AttachEffect"
 					{
-						"EffectName"		"particles/units/heroes/hero_alchemist/alchemist_acid_spray.vpcf"
-						"EffectAttachType"	"follow_origin"
-						"Target"			"TARGET"
+						"IsHidden" "1"
+						"EffectName"			"particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
+						"EffectAttachType"		"follow_origin"
+						"Target"				"CASTER"
+						
+						"EffectRadius"			"%radius"
+						"EffectColorA"			"255 0 0"
+						"EffectColorB"			"255 0 0"
+					
 						"ControlPoints"
 						{
-							"00" "0 0 0"
-							"01" "%radius 1 1"
-							"15" "28 225 28"
-							"16" "1 0 0"
+							"00"				"50 100 5"
 						}
 					}
 				}
-			}
-
-			"create_acid_spray_armor_reduction_aura"
-			{
-				"IsDebuff"		"1"
-				"IsPurgable"	"0"
-				"EffectName"	"particles/units/heroes/hero_alchemist/alchemist_acid_spray_debuff.vpcf"
-				"ThinkInterval"	"%tick_rate"
-				"OnIntervalThink"
-				{
-					"Damage"
-					{
-						"Type"		"DAMAGE_TYPE_COMPOSITE"
-						"Damage"	"%damage"
-						"Target"	"TARGET"
-					}
-				}
-
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%armor_reduction"
-				}
-			}
-			
-			"acid_spray_fx"
-			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				"OnCreated"
-				{
-					"AttachEffect"
-					{
-						"Target"					"CASTER"
-						"EffectName"				"particles/econ/generic/generic_buff_1/generic_buff_1.vpcf"
-						"EffectAttachType"			"follow_overhead"
-						"EffectLifeDurationScale"	"1"
-						"EffectColorA"				"28 255 28"
-						"EffectAlphaScale"			"1"
-					}
-				}
-			}
-		}
-
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"radius"				"250"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"16.0"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage"				"118 128 138 158"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"armor_reduction"		"-3 -4 -5 -6"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"tick_rate"				"1.0"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"damage_explode"		"450 650 850 1050"
 			}
 		}
 	}

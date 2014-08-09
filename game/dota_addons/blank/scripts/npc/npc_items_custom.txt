@@ -2,7 +2,7 @@
 {
 	"item_tower_basic"
 	{
-		"ID"							"1000"
+		"ID"							"1700"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
 		"BaseClass"						"item_datadriven"
 		"AbilityTextureName"			"item_ward_observer"
@@ -31,6 +31,44 @@
 			{}
 		}
 	}
+
+	"item_tower_splash"
+	{
+		"ID"							"1701"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_ward_sentry"
+
+		"AbilityCastRange"				"1800"
+		"AbilityCastPoint"				"0.0"
+		
+		"ItemCost"						"100"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+
+		"OnSpellStart"
+		{
+			"SpawnUnit"
+			{
+				"UnitName"				"npc_dota_td_splash"
+				"Target"				"POINT"
+			}
+			
+			"SpendCharge"
+			{}
+		}
+	}
+
+
+
+
+
+
 
 	"item_placebuilding"
     {

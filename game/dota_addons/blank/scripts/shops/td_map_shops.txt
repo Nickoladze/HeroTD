@@ -3,7 +3,7 @@
 	"consumables"
 	{
 		"item"		"item_tower_basic"
-		"item"		"item_placebuilding"
+		"item"		"item_tower_splash"
 	}
 
 	"attributes"

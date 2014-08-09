@@ -9,6 +9,7 @@
 -- Loadout items for heroes spawned
 -- Play a voice line at the start of every wave
 -- "Attempting to create unknown particle system 'RESOURCE_HANDLE_INVALID'" on tower placement
+-- Larger shop size, global?
 
 require("holdout_game_round")
 require("holdout_game_spawner")
@@ -18,7 +19,8 @@ if CBlankGameMode == nil then
 end
 
 function Precache( context )
-	PrecacheItemByNameSync( "item_tower_basic", context )
+	PrecacheItemByNameSync("item_tower_basic", context)
+	PrecacheItemByNameSync("item_tower_splash", context)
 end
 
 function Activate()

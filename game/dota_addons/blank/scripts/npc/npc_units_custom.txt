@@ -5,12 +5,11 @@
 
 	"npc_dota_td_basic"
 	{
-		"BaseClass"					"npc_dota_venomancer_plagueward"
+		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/props_structures/tower_good.vmdl"
 		"SoundSet"					"Hero_Tinker"
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_tinker.vsndevts"
 
-		"BaseClass"					""
 		"Level"						"1"
 		"ModelScale" 				"1"
 
@@ -28,11 +27,126 @@
 		"AttackAnimationPoint"		"0.3"
 		"AttackAcquisitionRange"	"900"
 		"AttackRange"				"900"
-		"ProjectileModel"			"particles/base_Attacks/ranged_tower_good.vpcf"
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"
 		"ProjectileSpeed"			"1900"
 
 		"BoundsHullName"			"DOTA_HULL_SIZE_BUILDING"
-		//"HealthBarOffset"			"170"
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"0.5"
+	
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		"StatusHealth"				"150"
+		"StatusHealthRegen"			"0.25"
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0"
+
+		"TeamName"					"DOTA_TEAM_GOODGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		
+		"VisionDaytimeRange"		"1800"
+		"VisionNighttimeRange"		"1800"
+
+		"HasInventory"				"0"
+	}
+
+	"npc_dota_td_splash"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/props_structures/tower_dragon_white.vmdl"
+		"SoundSet"					"Hero_Lina"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_lina.vsndevts"
+
+		"Level"						"1"
+		"ModelScale" 				"1"
+
+		"Ability1"					"tower_splash"
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability5"					""
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"25"
+		"AttackDamageMax"			"30"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.3"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"700"
+		"AttackRange"				"700"
+		"ProjectileModel"			"particles/units/heroes/hero_dragon_knight/dragon_knight_elder_dragon_fire.vpcf"
+		"ProjectileSpeed"			"1900"
+
+		"BoundsHullName"			"DOTA_HULL_SIZE_BUILDING"
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"0.5"
+	
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		"StatusHealth"				"150"
+		"StatusHealthRegen"			"0.25"
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0"
+
+		"TeamName"					"DOTA_TEAM_GOODGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		
+		"VisionDaytimeRange"		"1800"
+		"VisionNighttimeRange"		"1800"
+
+		"HasInventory"				"0"
+	}
+
+
+
+
+
+
+
+
+
+
+
+	"npc_dota_td_flamethrower"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/props_structures/tower_dragon_white.vmdl"
+		"SoundSet"					"Hero_Lina"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_lina.vsndevts"
+
+		"Level"						"1"
+		"ModelScale" 				"1"
+
+		"Ability1"					"tower_flamethrower"
+		"Ability2"					"tower_splash"
+		"Ability3"					""
+		"Ability4"					""
+		"Ability5"					""
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"25"
+		"AttackDamageMax"			"30"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.3"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"900"
+		"AttackRange"				"900"
+		"ProjectileModel"			"particles/units/heroes/hero_dragon_knight/dragon_knight_elder_dragon_fire.vpcf"
+		"ProjectileSpeed"			"1900"
+
+		"BoundsHullName"			"DOTA_HULL_SIZE_BUILDING"
 
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
 		"MovementSpeed"				"0"
@@ -57,7 +171,33 @@
 
 		"HasInventory"				"0"
 
-		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+		"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+				}
+			}
+
+			"DefaultState"				"Invade"
+
+			"OffensiveAbilities"
+			{
+				"Ability1"				
+				{
+					"Name"				"tower_flamethrower"
+					"AOE"				"1"
+					"Radius"			"650"
+					"MinimumTargets"	"1"
+				}
+			}
+		}
 	}
 
 
