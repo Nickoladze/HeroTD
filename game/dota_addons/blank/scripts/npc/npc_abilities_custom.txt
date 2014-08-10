@@ -24,11 +24,9 @@
 				{
 					"CleaveAttack"
 					{
-						//"Target"			"TARGET"
-						"CleavePercent"		"50"
+						"CleavePercent"		"%splash_percent"
 						"CleaveRadius"		"%radius"
 						"CleaveEffect"		"particles/items_fx/battlefury_cleave.vpcf"
-						//"CleaveEffect"		"particles/units/heroes/hero_tiny/tiny_grow_cleave.vpcf"
 					}
 
 					"FireEffect"
@@ -38,14 +36,6 @@
 						"EffectAttachType"	"follow_origin"
 						"EffectRadius"		"%radius"
 					}
-
-					//"Damage"
-					//{
-					//	"Target"			"TARGET"
-						//"Type"			""
-						//"MinDamage"		""
-						//"MaxDamage"		""
-					//}
 				}
 			}
 		}
@@ -55,7 +45,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"400"
+				"radius"					"300"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_percent"			"50"
 			}
 		}
 	}

@@ -4,12 +4,14 @@
 -- Clean up all these functions
 -- Rosh pit vision in spawn area
 -- Allow units to attack once at the fountain
--- Strings
+-- Don't allow building placement in lanes, spawn pit, around ancient
+-- Strings for abilities, tooltips, character names
 -- Snap buildings to grid
 -- Loadout items for heroes spawned
 -- Play a voice line at the start of every wave
 -- "Attempting to create unknown particle system 'RESOURCE_HANDLE_INVALID'" on tower placement
 -- Larger shop size, global?
+-- Round titles not showing
 
 require("holdout_game_round")
 require("holdout_game_spawner")
