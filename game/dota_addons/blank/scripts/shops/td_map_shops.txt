@@ -4,6 +4,7 @@
 	{
 		"item"		"item_tower_basic"
 		"item"		"item_tower_splash"
+		"item"		"item_tower_wall"
 	}
 
 	"attributes"
