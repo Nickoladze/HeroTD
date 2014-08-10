@@ -13,8 +13,8 @@
 		"Level"						"1"
 		"ModelScale" 				"1"
 
-		"Ability1"					""
-		"Ability2"					""
+		"Ability1"					"upgrade_tower_basic"
+		"Ability2"					"sell_tower_basic"
 		"Ability3"					""
 		"Ability4"					""
 		"Ability5"					""
@@ -24,6 +24,112 @@
 		"AttackDamageMax"			"30"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.3"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"900"
+		"AttackRange"				"900"
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"
+		"ProjectileSpeed"			"1900"
+
+		"BoundsHullName"			"DOTA_HULL_SIZE_BUILDING"
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"0.5"
+	
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		"StatusHealth"				"150"
+		"StatusHealthRegen"			"0.25"
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0"
+
+		"TeamName"					"DOTA_TEAM_GOODGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		
+		"VisionDaytimeRange"		"1800"
+		"VisionNighttimeRange"		"1800"
+
+		"HasInventory"				"0"
+	}
+
+	"npc_dota_td_basic_2"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/props_structures/tower_good.vmdl"
+		"SoundSet"					"Hero_Tinker"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_tinker.vsndevts"
+
+		"Level"						"1"
+		"ModelScale" 				"1.25"
+
+		"Ability1"					"upgrade_tower_basic_2"
+		"Ability2"					"sell_tower_basic_2"
+		"Ability3"					""
+		"Ability4"					""
+		"Ability5"					""
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"45"
+		"AttackDamageMax"			"50"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.2"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"900"
+		"AttackRange"				"900"
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"
+		"ProjectileSpeed"			"1900"
+
+		"BoundsHullName"			"DOTA_HULL_SIZE_BUILDING"
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"0.5"
+	
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		"StatusHealth"				"150"
+		"StatusHealthRegen"			"0.25"
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0"
+
+		"TeamName"					"DOTA_TEAM_GOODGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		
+		"VisionDaytimeRange"		"1800"
+		"VisionNighttimeRange"		"1800"
+
+		"HasInventory"				"0"
+	}
+
+	"npc_dota_td_basic_3"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/props_structures/tower_good.vmdl"
+		"SoundSet"					"Hero_Tinker"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_tinker.vsndevts"
+
+		"Level"						"1"
+		"ModelScale" 				"1.5"
+
+		"Ability1"					""
+		"Ability2"					"sell_tower_basic_3"
+		"Ability3"					""
+		"Ability4"					""
+		"Ability5"					""
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"75"
+		"AttackDamageMax"			"80"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.2"
 		"AttackAnimationPoint"		"0.3"
 		"AttackAcquisitionRange"	"900"
 		"AttackRange"				"900"
@@ -66,15 +172,121 @@
 		"Level"						"1"
 		"ModelScale" 				"1"
 
-		"Ability1"					"tower_splash"
-		"Ability2"					""
-		"Ability3"					""
+		"Ability1"					"upgrade_tower_splash"
+		"Ability2"					"sell_tower_splash"
+		"Ability3"					"tower_splash"
 		"Ability4"					""
 		"Ability5"					""
 
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"			"15"
 		"AttackDamageMax"			"20"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.3"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"700"
+		"AttackRange"				"700"
+		"ProjectileModel"			"particles/units/heroes/hero_dragon_knight/dragon_knight_elder_dragon_fire.vpcf"
+		"ProjectileSpeed"			"1900"
+
+		"BoundsHullName"			"DOTA_HULL_SIZE_BUILDING"
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"0.5"
+	
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		"StatusHealth"				"150"
+		"StatusHealthRegen"			"0.25"
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0"
+
+		"TeamName"					"DOTA_TEAM_GOODGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		
+		"VisionDaytimeRange"		"1800"
+		"VisionNighttimeRange"		"1800"
+
+		"HasInventory"				"0"
+	}
+
+	"npc_dota_td_splash_2"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/props_structures/tower_dragon_white.vmdl"
+		"SoundSet"					"Hero_Lina"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_lina.vsndevts"
+
+		"Level"						"1"
+		"ModelScale" 				"1.25"
+
+		"Ability1"					"upgrade_tower_splash"
+		"Ability2"					"sell_tower_splash"
+		"Ability3"					"tower_splash"
+		"Ability4"					""
+		"Ability5"					""
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"25"
+		"AttackDamageMax"			"30"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.3"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"700"
+		"AttackRange"				"700"
+		"ProjectileModel"			"particles/units/heroes/hero_dragon_knight/dragon_knight_elder_dragon_fire.vpcf"
+		"ProjectileSpeed"			"1900"
+
+		"BoundsHullName"			"DOTA_HULL_SIZE_BUILDING"
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"0.5"
+	
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		"StatusHealth"				"150"
+		"StatusHealthRegen"			"0.25"
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0"
+
+		"TeamName"					"DOTA_TEAM_GOODGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		
+		"VisionDaytimeRange"		"1800"
+		"VisionNighttimeRange"		"1800"
+
+		"HasInventory"				"0"
+	}
+
+	"npc_dota_td_splash_3
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/props_structures/tower_dragon_white.vmdl"
+		"SoundSet"					"Hero_Lina"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_lina.vsndevts"
+
+		"Level"						"1"
+		"ModelScale" 				"1.5"
+
+		"Ability1"					""
+		"Ability2"					"sell_tower_splash"
+		"Ability3"					"tower_splash"
+		"Ability4"					""
+		"Ability5"					""
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"45"
+		"AttackDamageMax"			"50"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.3"
 		"AttackAnimationPoint"		"0.3"
@@ -229,20 +441,13 @@
 		"Level"						"1"
 		"ModelScale"				".95"
 
+		"AbilityLayout"				"4"
 		"Ability1"					""
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
 
-		"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"
-		"AttributeBaseStrength"		"16"
-		"AttributeStrengthGain"		"1.7"
-		"AttributeBaseIntelligence"	"16"
-		"AttributeIntelligenceGain"	"2.9"
-		"AttributeBaseAgility"		"16"
-		"AttributeAgilityGain"		"1.6"
-
-		"ArmorPhysical"				"-1"
+		"ArmorPhysical"				"0"
 
 		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 
@@ -286,20 +491,13 @@
 		"Level"						"1"
 		"ModelScale"				".81"
 
+		"AbilityLayout"				"4"
 		"Ability1"					""
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
 
-		"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"
-		"AttributeBaseStrength"		"18"
-		"AttributeStrengthGain"		"1.5"
-		"AttributeBaseIntelligence"	"27"
-		"AttributeIntelligenceGain"	"3.2"
-		"AttributeBaseAgility"		"16"
-		"AttributeAgilityGain"		"1.5"
-
-		"ArmorPhysical"				"-1"
+		"ArmorPhysical"				"0"
 
 		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 
@@ -343,20 +541,13 @@
 		"Level"						"1"
 		"ModelScale"				".98"
 
-		"Ability1"					"windrunner_windrun"
+		"AbilityLayout"				"4"
+		"Ability1"					""
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
 
-		"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"
-		"AttributeBaseStrength"		"15"
-		"AttributeStrengthGain"		"2.5"
-		"AttributeBaseIntelligence"	"22"
-		"AttributeIntelligenceGain"	"2.6"
-		"AttributeBaseAgility"		"17"
-		"AttributeAgilityGain"		"1.4"
-
-		"ArmorPhysical"				"-1"
+		"ArmorPhysical"				"0"
 
 		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 
@@ -373,6 +564,56 @@
 		"MovementTurnRate"			"0.5"
 
 		"StatusHealth"				"150"
+		"StatusHealthRegen"			"0.25"
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0.01"
+		
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_HERO"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_HERO"
+
+		"VisionDaytimeRange"		"0"
+		"VisionNighttimeRange"		"0"
+	}
+
+	//=================================================================================
+	// Windrunner
+	//=================================================================================
+	"npc_dota_tdcreep_windrunner"
+	{										
+		"Model"						"models/heroes/windrunner/windrunner.vmdl"
+		"Portrait"					"vgui/hud/heroportraits/portrait_windrunner"
+		"BaseClass"					"npc_dota_creep_lane"
+		"SoundSet"					"Hero_Windrunner"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_windrunner.vsndevts"
+		
+		"Level"						"3"
+		"ModelScale"				"1.7"
+
+		"AbilityLayout"				"4"
+		"Ability1"					"windrunner_windrun"
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+
+		"ArmorPhysical"				"0"
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+
+		//"RingRadius"				"40"
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+		"HealthBarOffset"			"135"
+
+		"BountyXP"					"0"
+		"BountyGoldMin"				"20"
+		"BountyGoldMax"				"25"
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"295"
+		"MovementTurnRate"			"0.5"
+
+		"StatusHealth"				"300"
 		"StatusHealthRegen"			"0.25"
 		"StatusMana"				"0"
 		"StatusManaRegen"			"0.01"

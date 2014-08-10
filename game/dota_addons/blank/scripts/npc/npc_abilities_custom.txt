@@ -192,4 +192,370 @@
 			}
 		}
 	}
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////
+	/////////////////////////	TOWER UPGRADES
+	/////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	"upgrade_tower_basic"
+	{
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"							"ability_datadriven"
+		"AbilityTextureName"				"undying_tombstone"
+		"AbilityGoldCost"					"100"
+
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"Target"					"CASTER"
+				"EffectName"				"Hero_Tinker.Rearm"
+			}
+
+			"ReplaceUnit"
+			{
+				"UnitName"					"npc_dota_td_basic_2"
+				"Target"					"CASTER"
+			}
+		}
+	}
+
+	"upgrade_tower_basic_2"
+	{
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"							"ability_datadriven"
+		"AbilityTextureName"				"undying_tombstone"
+		"AbilityGoldCost"					"100"
+
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"Target"					"CASTER"
+				"EffectName"				"Hero_Tinker.Rearm"
+			}
+
+			"ReplaceUnit"
+			{
+				"UnitName"					"npc_dota_td_basic_3"
+				"Target"					"CASTER"
+			}
+		}
+	}
+
+	"upgrade_tower_splash"
+	{
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"							"ability_datadriven"
+		"AbilityTextureName"				"undying_tombstone"
+		"AbilityGoldCost"					"100"
+
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"Target"					"CASTER"
+				"EffectName"				"Hero_Tinker.Rearm"
+			}
+
+			"ReplaceUnit"
+			{
+				"UnitName"					"npc_dota_td_splash_2"
+				"Target"					"CASTER"
+			}
+		}
+	}
+
+	"upgrade_tower_splash_2"
+	{
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"							"ability_datadriven"
+		"AbilityTextureName"				"undying_tombstone"
+		"AbilityGoldCost"					"100"
+
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"Target"					"CASTER"
+				"EffectName"				"Hero_Tinker.Rearm"
+			}
+
+			"ReplaceUnit"
+			{
+				"UnitName"					"npc_dota_td_splash_3"
+				"Target"					"CASTER"
+			}
+		}
+	}
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////
+	/////////////////////////	TOWER SELLS
+	/////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	"sell_tower_basic"
+	{
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"							"ability_datadriven"
+		"AbilityTextureName"				"lone_druid_spirit_bear_demolish"
+
+		"OnSpellStart"
+		{
+			"AttachEffect"
+			{
+				"IsHidden" 					"1"
+				"EffectName"				"particles/units/heroes/hero_templar_assassin/templar_assassin_trap_explode.vpcf"
+				"EffectAttachType"			"follow_origin"
+				"Target"					"CASTER"
+				"EffectDurationScale"		"1"
+				"EffectLifeDurationScale" 	"1"
+			}
+
+			"FireSound"
+			{
+				"Target"					"CASTER"
+				"EffectName"				"sounds/vo/rattletrap/ratt_death_01.vsnd" // TODO sound
+			}
+
+			"RunScript"
+			{
+				"ScriptFile"				"scripts/vscripts/abilities.lua"
+				"Function"					"DestroyTower"
+				"SellPrice"					"50"
+				//"Target"					"TARGET"
+				//"Team"						"SELF"
+				//"KVCallback"				"OnChannelFinish"
+			}
+
+			"Damage"
+			{
+				"Target"					"CASTER"
+				"Type"						"DAMAGE_TYPE_PHYSICAL"
+				"Damage"					"9999999999"
+			}
+		}
+	}
+
+	"sell_tower_basic_2"
+	{
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"							"ability_datadriven"
+		"AbilityTextureName"				"lone_druid_spirit_bear_demolish"
+
+		"OnSpellStart"
+		{
+			"AttachEffect"
+			{
+				"IsHidden" 					"1"
+				"EffectName"				"particles/units/heroes/hero_templar_assassin/templar_assassin_trap_explode.vpcf"
+				"EffectAttachType"			"follow_origin"
+				"Target"					"CASTER"
+				"EffectDurationScale"		"1"
+				"EffectLifeDurationScale" 	"1"
+			}
+
+			"FireSound"
+			{
+				"Target"					"CASTER"
+				"EffectName"				"sounds/vo/rattletrap/ratt_death_01.vsnd" // TODO sound
+			}
+
+			"RunScript"
+			{
+				"ScriptFile"				"scripts/vscripts/abilities.lua"
+				"Function"					"DestroyTower"
+				"SellPrice"					"50"
+				//"Target"					"TARGET"
+				//"Team"						"SELF"
+				//"KVCallback"				"OnChannelFinish"
+			}
+
+			"Damage"
+			{
+				"Target"					"CASTER"
+				"Type"						"DAMAGE_TYPE_PHYSICAL"
+				"Damage"					"9999999999"
+			}
+		}
+	}
+
+	"sell_tower_basic_3"
+	{
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"							"ability_datadriven"
+		"AbilityTextureName"				"lone_druid_spirit_bear_demolish"
+
+		"OnSpellStart"
+		{
+			"AttachEffect"
+			{
+				"IsHidden" 					"1"
+				"EffectName"				"particles/units/heroes/hero_templar_assassin/templar_assassin_trap_explode.vpcf"
+				"EffectAttachType"			"follow_origin"
+				"Target"					"CASTER"
+				"EffectDurationScale"		"1"
+				"EffectLifeDurationScale" 	"1"
+			}
+
+			"FireSound"
+			{
+				"Target"					"CASTER"
+				"EffectName"				"sounds/vo/rattletrap/ratt_death_01.vsnd" // TODO sound
+			}
+
+			"RunScript"
+			{
+				"ScriptFile"				"scripts/vscripts/abilities.lua"
+				"Function"					"DestroyTower"
+				"SellPrice"					"50"
+				//"Target"					"TARGET"
+				//"Team"						"SELF"
+				//"KVCallback"				"OnChannelFinish"
+			}
+
+			"Damage"
+			{
+				"Target"					"CASTER"
+				"Type"						"DAMAGE_TYPE_PHYSICAL"
+				"Damage"					"9999999999"
+			}
+		}
+	}
+
+	"sell_tower_splash"
+	{
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"							"ability_datadriven"
+		"AbilityTextureName"				"lone_druid_spirit_bear_demolish"
+
+		"OnSpellStart"
+		{
+			"AttachEffect"
+			{
+				"IsHidden" 					"1"
+				"EffectName"				"particles/units/heroes/hero_templar_assassin/templar_assassin_trap_explode.vpcf"
+				"EffectAttachType"			"follow_origin"
+				"Target"					"CASTER"
+				"EffectDurationScale"		"1"
+				"EffectLifeDurationScale" 	"1"
+			}
+
+			"FireSound"
+			{
+				"Target"					"CASTER"
+				"EffectName"				"sounds/vo/rattletrap/ratt_death_01.vsnd" // TODO sound
+			}
+
+			"RunScript"
+			{
+				"ScriptFile"				"scripts/vscripts/abilities.lua"
+				"Function"					"DestroyTower"
+				"SellPrice"					"50"
+				//"Target"					"TARGET"
+				//"Team"						"SELF"
+				//"KVCallback"				"OnChannelFinish"
+			}
+
+			"Damage"
+			{
+				"Target"					"CASTER"
+				"Type"						"DAMAGE_TYPE_PHYSICAL"
+				"Damage"					"9999999999"
+			}
+		}
+	}
+
+	"sell_tower_splash_2"
+	{
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"							"ability_datadriven"
+		"AbilityTextureName"				"lone_druid_spirit_bear_demolish"
+
+		"OnSpellStart"
+		{
+			"AttachEffect"
+			{
+				"IsHidden" 					"1"
+				"EffectName"				"particles/units/heroes/hero_templar_assassin/templar_assassin_trap_explode.vpcf"
+				"EffectAttachType"			"follow_origin"
+				"Target"					"CASTER"
+				"EffectDurationScale"		"1"
+				"EffectLifeDurationScale" 	"1"
+			}
+
+			"FireSound"
+			{
+				"Target"					"CASTER"
+				"EffectName"				"sounds/vo/rattletrap/ratt_death_01.vsnd" // TODO sound
+			}
+
+			"RunScript"
+			{
+				"ScriptFile"				"scripts/vscripts/abilities.lua"
+				"Function"					"DestroyTower"
+				"SellPrice"					"50"
+				//"Target"					"TARGET"
+				//"Team"						"SELF"
+				//"KVCallback"				"OnChannelFinish"
+			}
+
+			"Damage"
+			{
+				"Target"					"CASTER"
+				"Type"						"DAMAGE_TYPE_PHYSICAL"
+				"Damage"					"9999999999"
+			}
+		}
+	}
+
+	"sell_tower_splash_3"
+	{
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"							"ability_datadriven"
+		"AbilityTextureName"				"lone_druid_spirit_bear_demolish"
+
+		"OnSpellStart"
+		{
+			"AttachEffect"
+			{
+				"IsHidden" 					"1"
+				"EffectName"				"particles/units/heroes/hero_templar_assassin/templar_assassin_trap_explode.vpcf"
+				"EffectAttachType"			"follow_origin"
+				"Target"					"CASTER"
+				"EffectDurationScale"		"1"
+				"EffectLifeDurationScale" 	"1"
+			}
+
+			"FireSound"
+			{
+				"Target"					"CASTER"
+				"EffectName"				"sounds/vo/rattletrap/ratt_death_01.vsnd" // TODO sound
+			}
+
+			"RunScript"
+			{
+				"ScriptFile"				"scripts/vscripts/abilities.lua"
+				"Function"					"DestroyTower"
+				"SellPrice"					"50"
+				//"Target"					"TARGET"
+				//"Team"						"SELF"
+				//"KVCallback"				"OnChannelFinish"
+			}
+
+			"Damage"
+			{
+				"Target"					"CASTER"
+				"Type"						"DAMAGE_TYPE_PHYSICAL"
+				"Damage"					"9999999999"
+			}
+		}
+	}
 }

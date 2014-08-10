@@ -12,6 +12,8 @@
 -- "Attempting to create unknown particle system 'RESOURCE_HANDLE_INVALID'" on tower placement
 -- Larger shop size, global?
 -- Round titles not showing
+-- Splash tower has no impact sound
+-- Remove recommended items
 
 require("holdout_game_round")
 require("holdout_game_spawner")
@@ -58,6 +60,7 @@ function CBlankGameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetCameraDistanceOverride(1500)
 	--GameRules:GetGameModeEntity():ClientLoadGridNav()
 
+	-- TODO remove
 	SendToServerConsole('jointeam good')
 
 	-- Hook into game events allowing reload of functions at run time

@@ -29,6 +29,16 @@
 			"UnitsPerSpawn"			"3"
 			"SpawnInterval"			"8"
 		}
+
+		// TODO REMOVE
+		"UnitWindrunner_1a"
+		{
+			"GroupWithUnit"			"UnitMaiden_1a"
+			
+			"NPCName"				"npc_dota_tdcreep_windrunner"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+		}
 		
 		"UnitMaiden_2a"
 		{
@@ -71,7 +81,6 @@
 			"UnitsPerSpawn"			"4"
 			"SpawnInterval"			"8"
 		}
-		
 
 		"UnitLina_3a"
 		{
@@ -102,11 +111,18 @@
 			"WaitForUnit"			"UnitWindranger_1a"
 			
 			"NPCName"				"npc_dota_tdcreep_windranger"
-			"TotalUnitsToSpawn"		"8"
-			"UnitsPerSpawn"			"4"
-			"SpawnInterval"			"8"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"3"
 		}
-		
+
+		"UnitWindrunner_2a"
+		{
+			"GroupWithUnit"			"UnitWindranger_2a"
+			
+			"NPCName"				"npc_dota_tdcreep_windrunner"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+		}
 
 		"UnitWindranger_3a"
 		{
