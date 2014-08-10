@@ -1,20 +1,20 @@
 -- TODO
--- Clean up unused map configs/reading them
--- UI at game start
--- Clean up all these functions
--- Rosh pit vision in spawn area
+-- Clean up spawn code
+-- Re-write waypoints to use Kinky's method
+-- Rosh pit vision blockers in spawn area
 -- Allow units to attack once at the fountain
 -- Don't allow building placement in lanes, spawn pit, around ancient
--- Strings for abilities, tooltips, character names
+-- Strings for abilities, tooltips, character names (Game start UI)
 -- Snap buildings to grid
 -- Loadout items for heroes spawned
 -- Play a voice line at the start of every wave
 -- "Attempting to create unknown particle system 'RESOURCE_HANDLE_INVALID'" on tower placement
--- Larger shop size, global?
 -- Round titles not showing
--- Splash tower has no impact sound
+-- Splash tower has no sounds
 -- Remove recommended items
 -- Balance tower cost, upgrade cost, destruction refund
+-- Balance health/damage around re-used vanilla spells (Fissure)
+-- Selection circles on buildings
 
 require("holdout_game_round")
 require("holdout_game_spawner")
@@ -26,6 +26,9 @@ end
 function Precache( context )
 	PrecacheItemByNameSync("item_tower_basic", context)
 	PrecacheItemByNameSync("item_tower_splash", context)
+	PrecacheItemByNameSync("item_tower_wall", context)
+
+	PrecacheUnitByNameSync('npc_precache_everything', context)
 end
 
 function Activate()

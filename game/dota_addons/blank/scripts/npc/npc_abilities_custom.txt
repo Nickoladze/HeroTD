@@ -533,7 +533,7 @@
 			"FireSound"
 			{
 				"Target"					"CASTER"
-				"EffectName"				"sounds/vo/rattletrap/ratt_death_01.vsnd" // TODO sound
+				"EffectName"				"Hero_TemplarAssassin.Trap.Explode"
 			}
 
 			"RunScript"
@@ -573,7 +573,7 @@
 			"FireSound"
 			{
 				"Target"					"CASTER"
-				"EffectName"				"sounds/vo/rattletrap/ratt_death_01.vsnd" // TODO sound
+				"EffectName"				"Hero_TemplarAssassin.Trap.Explode"
 			}
 
 			"RunScript"
@@ -613,7 +613,7 @@
 			"FireSound"
 			{
 				"Target"					"CASTER"
-				"EffectName"				"sounds/vo/rattletrap/ratt_death_01.vsnd" // TODO sound
+				"EffectName"				"Hero_TemplarAssassin.Trap.Explode"
 			}
 
 			"RunScript"
@@ -653,7 +653,7 @@
 			"FireSound"
 			{
 				"Target"					"CASTER"
-				"EffectName"				"sounds/vo/rattletrap/ratt_death_01.vsnd" // TODO sound
+				"EffectName"				"Hero_TemplarAssassin.Trap.Explode"
 			}
 
 			"RunScript"
@@ -693,7 +693,7 @@
 			"FireSound"
 			{
 				"Target"					"CASTER"
-				"EffectName"				"sounds/vo/rattletrap/ratt_death_01.vsnd" // TODO sound
+				"EffectName"				"Hero_TemplarAssassin.Trap.Explode"
 			}
 
 			"RunScript"
@@ -733,7 +733,7 @@
 			"FireSound"
 			{
 				"Target"					"CASTER"
-				"EffectName"				"sounds/vo/rattletrap/ratt_death_01.vsnd" // TODO sound
+				"EffectName"				"Hero_TemplarAssassin.Trap.Explode"
 			}
 
 			"RunScript"
@@ -773,7 +773,7 @@
 			"FireSound"
 			{
 				"Target"					"CASTER"
-				"EffectName"				"sounds/vo/rattletrap/ratt_death_01.vsnd" // TODO sound
+				"EffectName"				"Hero_TemplarAssassin.Trap.Explode"
 			}
 
 			"RunScript"
@@ -813,7 +813,7 @@
 			"FireSound"
 			{
 				"Target"					"CASTER"
-				"EffectName"				"sounds/vo/rattletrap/ratt_death_01.vsnd" // TODO sound
+				"EffectName"				"Hero_TemplarAssassin.Trap.Explode"
 			}
 
 			"RunScript"
@@ -853,7 +853,7 @@
 			"FireSound"
 			{
 				"Target"					"CASTER"
-				"EffectName"				"sounds/vo/rattletrap/ratt_death_01.vsnd" // TODO sound
+				"EffectName"				"Hero_TemplarAssassin.Trap.Explode"
 			}
 
 			"RunScript"
