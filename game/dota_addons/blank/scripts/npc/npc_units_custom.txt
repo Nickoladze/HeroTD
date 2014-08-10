@@ -119,7 +119,7 @@
 		"Level"						"1"
 		"ModelScale" 				"1.5"
 
-		"Ability1"					""
+		"Ability1"					"upgrade_tower_basic_3"
 		"Ability2"					"sell_tower_basic_3"
 		"Ability3"					""
 		"Ability4"					""
@@ -129,7 +129,7 @@
 		"AttackDamageMin"			"75"
 		"AttackDamageMax"			"80"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"1.2"
+		"AttackRate"				"1.0"
 		"AttackAnimationPoint"		"0.3"
 		"AttackAcquisitionRange"	"900"
 		"AttackRange"				"900"
@@ -225,9 +225,9 @@
 		"Level"						"1"
 		"ModelScale" 				"1.25"
 
-		"Ability1"					"upgrade_tower_splash"
-		"Ability2"					"sell_tower_splash"
-		"Ability3"					"tower_splash"
+		"Ability1"					"upgrade_tower_splash_2"
+		"Ability2"					"sell_tower_splash_2"
+		"Ability3"					"tower_splash_2"
 		"Ability4"					""
 		"Ability5"					""
 
@@ -235,7 +235,7 @@
 		"AttackDamageMin"			"25"
 		"AttackDamageMax"			"30"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"1.3"
+		"AttackRate"				"1.2"
 		"AttackAnimationPoint"		"0.3"
 		"AttackAcquisitionRange"	"700"
 		"AttackRange"				"700"
@@ -268,7 +268,7 @@
 		"HasInventory"				"0"
 	}
 
-	"npc_dota_td_splash_3
+	"npc_dota_td_splash_3"
 	{
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/props_structures/tower_dragon_white.vmdl"
@@ -278,9 +278,9 @@
 		"Level"						"1"
 		"ModelScale" 				"1.5"
 
-		"Ability1"					""
-		"Ability2"					"sell_tower_splash"
-		"Ability3"					"tower_splash"
+		"Ability1"					"upgrade_tower_splash_3"
+		"Ability2"					"sell_tower_splash_3"
+		"Ability3"					"tower_splash_3"
 		"Ability4"					""
 		"Ability5"					""
 
@@ -288,7 +288,7 @@
 		"AttackDamageMin"			"45"
 		"AttackDamageMax"			"50"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"1.3"
+		"AttackRate"				"1.0"
 		"AttackAnimationPoint"		"0.3"
 		"AttackAcquisitionRange"	"700"
 		"AttackRange"				"700"

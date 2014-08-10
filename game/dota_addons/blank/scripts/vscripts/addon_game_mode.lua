@@ -14,6 +14,7 @@
 -- Round titles not showing
 -- Splash tower has no impact sound
 -- Remove recommended items
+-- Balance tower cost, upgrade cost, destruction refund
 
 require("holdout_game_round")
 require("holdout_game_spawner")

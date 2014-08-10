@@ -9,34 +9,22 @@
 		"BaseClass"							"ability_datadriven"
 		"AbilityTextureName"				"sven_great_cleave"
 
-		"Modifiers"
-		{
-			"tower_orb_splash"
-			{
-				"IsHidden"					"0"
-				"Passive"					"1"
-				"Orb"
-				{
-					"Priority"				"DOTA_ORB_PRIORITY_ABILITY"
-				}
-				
-				"OnOrbImpact"
-				{
-					"CleaveAttack"
-					{
-						"CleavePercent"		"%splash_percent"
-						"CleaveRadius"		"%radius"
-						"CleaveEffect"		"particles/items_fx/battlefury_cleave.vpcf"
-					}
 
-					"FireEffect"
-					{
-						"Target"			"TARGET"
-						"EffectName"		"particles/units/heroes/hero_dragon_knight/dragon_knight_elder_dragon_fire_explosion.vpcf"
-						"EffectAttachType"	"follow_origin"
-						"EffectRadius"		"%radius"
-					}
-				}
+		"OnAttackLanded"
+		{
+			"CleaveAttack"
+			{
+				"CleavePercent"				"50"
+				"CleaveRadius"				"300"
+				"CleaveEffect"				"particles/items_fx/battlefury_cleave.vpcf"
+			}
+
+			"FireEffect"
+			{
+				"Target"					"TARGET"
+				"EffectName"				"particles/units/heroes/hero_dragon_knight/dragon_knight_elder_dragon_fire_explosion.vpcf"
+				"EffectAttachType"			"follow_origin"
+				"EffectRadius"				"300"
 			}
 		}
 
@@ -51,6 +39,86 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"splash_percent"			"50"
+			}
+		}
+	}
+
+	"tower_splash_2"
+	{
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"ability_datadriven"
+		"AbilityTextureName"				"sven_great_cleave"
+
+
+		"OnAttackLanded"
+		{
+			"CleaveAttack"
+			{
+				"CleavePercent"				"60"
+				"CleaveRadius"				"400"
+				"CleaveEffect"				"particles/items_fx/battlefury_cleave.vpcf"
+			}
+
+			"FireEffect"
+			{
+				"Target"					"TARGET"
+				"EffectName"				"particles/units/heroes/hero_dragon_knight/dragon_knight_elder_dragon_fire_explosion.vpcf"
+				"EffectAttachType"			"follow_origin"
+				"EffectRadius"				"400"
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"400"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_percent"			"60"
+			}
+		}
+	}
+
+	"tower_splash_3"
+	{
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"ability_datadriven"
+		"AbilityTextureName"				"sven_great_cleave"
+
+
+		"OnAttackLanded"
+		{
+			"CleaveAttack"
+			{
+				"CleavePercent"				"70"
+				"CleaveRadius"				"500"
+				"CleaveEffect"				"particles/items_fx/battlefury_cleave.vpcf"
+			}
+
+			"FireEffect"
+			{
+				"Target"					"TARGET"
+				"EffectName"				"particles/units/heroes/hero_dragon_knight/dragon_knight_elder_dragon_fire_explosion.vpcf"
+				"EffectAttachType"			"follow_origin"
+				"EffectRadius"				"500"
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"500"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_percent"			"70"
 			}
 		}
 	}
@@ -193,13 +261,33 @@
 		}
 	}
 
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	/////////////////////////
-	/////////////////////////	TOWER UPGRADES
-	/////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	"upgrade_tower_basic"
 	{
@@ -245,6 +333,13 @@
 				"Target"					"CASTER"
 			}
 		}
+	}
+
+	"upgrade_tower_basic_3"
+	{
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"ability_datadriven"
+		"AbilityTextureName"				"undying_tombstone"
 	}
 
 	"upgrade_tower_splash"
@@ -293,13 +388,38 @@
 		}
 	}
 
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	/////////////////////////
-	/////////////////////////	TOWER SELLS
-	/////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	"upgrade_tower_splash_3"
+	{
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"ability_datadriven"
+		"AbilityTextureName"				"undying_tombstone"
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	"sell_tower_basic"
 	{
@@ -330,9 +450,6 @@
 				"ScriptFile"				"scripts/vscripts/abilities.lua"
 				"Function"					"DestroyTower"
 				"SellPrice"					"50"
-				//"Target"					"TARGET"
-				//"Team"						"SELF"
-				//"KVCallback"				"OnChannelFinish"
 			}
 
 			"Damage"
@@ -372,10 +489,7 @@
 			{
 				"ScriptFile"				"scripts/vscripts/abilities.lua"
 				"Function"					"DestroyTower"
-				"SellPrice"					"50"
-				//"Target"					"TARGET"
-				//"Team"						"SELF"
-				//"KVCallback"				"OnChannelFinish"
+				"SellPrice"					"100"
 			}
 
 			"Damage"
@@ -415,10 +529,7 @@
 			{
 				"ScriptFile"				"scripts/vscripts/abilities.lua"
 				"Function"					"DestroyTower"
-				"SellPrice"					"50"
-				//"Target"					"TARGET"
-				//"Team"						"SELF"
-				//"KVCallback"				"OnChannelFinish"
+				"SellPrice"					"150"
 			}
 
 			"Damage"
@@ -459,9 +570,6 @@
 				"ScriptFile"				"scripts/vscripts/abilities.lua"
 				"Function"					"DestroyTower"
 				"SellPrice"					"50"
-				//"Target"					"TARGET"
-				//"Team"						"SELF"
-				//"KVCallback"				"OnChannelFinish"
 			}
 
 			"Damage"
@@ -501,10 +609,7 @@
 			{
 				"ScriptFile"				"scripts/vscripts/abilities.lua"
 				"Function"					"DestroyTower"
-				"SellPrice"					"50"
-				//"Target"					"TARGET"
-				//"Team"						"SELF"
-				//"KVCallback"				"OnChannelFinish"
+				"SellPrice"					"100"
 			}
 
 			"Damage"
@@ -544,10 +649,7 @@
 			{
 				"ScriptFile"				"scripts/vscripts/abilities.lua"
 				"Function"					"DestroyTower"
-				"SellPrice"					"50"
-				//"Target"					"TARGET"
-				//"Team"						"SELF"
-				//"KVCallback"				"OnChannelFinish"
+				"SellPrice"					"150"
 			}
 
 			"Damage"
